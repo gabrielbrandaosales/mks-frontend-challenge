@@ -5,6 +5,7 @@ export const LayoutContainer = styled.div`
   flex-direction: column;
   justify-content: space-between;
   gap: 10rem;
+  min-height: 100vh;
 
   @media (max-width: 1094px) {
     gap: 2rem;

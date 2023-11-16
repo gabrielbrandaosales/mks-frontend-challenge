@@ -1,19 +1,19 @@
 import Image from 'next/image';
 import { FC, ReactNode, useState } from 'react';
-import { Footer, Header, LayoutContainer } from './styles';
 import logoMks from '@/assets/MKS.svg';
 
-// import { MdShoppingCart } from 'react-icons/md'
-// import { Cart } from "./components/Cart"
-// import { useAppSelector } from "@/hooks/selector"
+import { MdShoppingCart } from 'react-icons/md';
+import { useAppSelector } from '@/hooks/useSelector';
+import { Cart } from '@/components/Cart';
 
+import { Footer, Header, LayoutContainer } from './styles';
 interface LayoutProps {
   children: ReactNode;
 }
 
 export const Layout: FC<LayoutProps> = ({ children }) => {
   const [cartIsOpen, setCartIsOpen] = useState(false);
-  // const cartQuantity = useAppSelector(state => state.cart.cart.length)
+  const cartQuantity = useAppSelector((state) => state.cart.cart.length);
 
   function handleOpenCart() {
     setCartIsOpen(!cartIsOpen);
@@ -21,14 +21,14 @@ export const Layout: FC<LayoutProps> = ({ children }) => {
 
   return (
     <>
-      {/* {cartIsOpen && <Cart handleOpenCart={handleOpenCart}/>} */}
+      {cartIsOpen && <Cart handleOpenCart={handleOpenCart} />}
       <LayoutContainer>
         <Header>
-          <Image src={logoMks} alt="" />
+          <Image src={logoMks} alt="Logo MKS" />
 
           <button onClick={handleOpenCart}>
-            {/* <MdShoppingCart size={20}/>
-                        <span>{cartQuantity}</span> */}
+            <MdShoppingCart size={20} />
+            <span>{cartQuantity}</span>
           </button>
         </Header>
 

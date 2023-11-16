@@ -1,11 +1,11 @@
 import styled from 'styled-components';
 
-export const HomeContainer = styled.main`
+export const HomeContainer = styled.section`
   display: flex;
   justify-content: center;
 `;
 
-export const ProductsContainer = styled.main`
+export const ProductsContainer = styled.div`
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   row-gap: 3.1rem;
