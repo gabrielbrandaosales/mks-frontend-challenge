@@ -4,7 +4,7 @@ export const CartContainer = styled.div`
   display: flex;
   flex-direction: column;
   height: 100%;
-  z-index: 1;
+  z-index: 3;
 
   position: fixed;
   right: 0;
