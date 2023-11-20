@@ -3,6 +3,7 @@ import { CartContainer, CloseCart, ProductsList, Total } from './styles';
 import { AiOutlineClose } from 'react-icons/ai';
 import { ProductBuyed } from './components/ProductBuyed';
 import { useAppSelector } from '@/hooks/useSelector';
+import { priceFormatter } from '@/utils/formatter';
 
 interface CartProps {
   handleOpenCart: () => void;
@@ -40,7 +41,7 @@ export const Cart: FC<CartProps> = ({ handleOpenCart }) => {
       <Total>
         <span>
           <p>Total</p>
-          <p>{total}</p>
+          <p>{priceFormatter.format(total)}</p>
         </span>
 
         <button>Finalizar Compra</button>

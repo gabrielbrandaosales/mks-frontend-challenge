@@ -6,13 +6,13 @@ import { addProduct } from '@/features/cart/cart-slice';
 import { useDispatch } from 'react-redux';
 import { IProduct } from '@/services/products/types';
 import { ProductSkeleton } from './ProductSkeleton';
+import { priceFormatter } from '@/utils/formatter';
 
 interface ProductProps {
   product: IProduct;
-  isLoading: boolean;
 }
 
-export const Product: FC<ProductProps> = ({ product, isLoading }) => {
+export const Product: FC<ProductProps> = ({ product }) => {
   const dispatch = useDispatch();
 
   function handleBuyProduct() {
@@ -26,8 +26,6 @@ export const Product: FC<ProductProps> = ({ product, isLoading }) => {
 
     dispatch(addProduct(newProduct));
   }
-
-  if (isLoading) return <ProductSkeleton />;
 
   return (
     <Container>
@@ -44,7 +42,7 @@ export const Product: FC<ProductProps> = ({ product, isLoading }) => {
       <Description>
         <MainInfo>
           <h1>{product.name}</h1>
-          <span className="price">{product.price}</span>
+          <span className="price">{priceFormatter.format(product.price)}</span>
         </MainInfo>
 
         <p>{product.description}</p>

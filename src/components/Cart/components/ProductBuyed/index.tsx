@@ -15,6 +15,7 @@ import {
   increaseQuantity,
   decreaseQuantity,
 } from '@/features/cart/cart-slice';
+import { priceFormatter } from '@/utils/formatter';
 
 interface ICart {
   id: number;
@@ -65,7 +66,7 @@ export const ProductBuyed: FC<ProductBuyedProps> = ({ product }) => {
           </ChangeQuantity>
         </Quantity>
 
-        <p className="price">{product.price}</p>
+        <p className="price">{priceFormatter.format(product.price)}</p>
       </PriceByQuantity>
     </ProductBuyedContainer>
   );
