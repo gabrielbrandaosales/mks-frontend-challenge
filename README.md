@@ -6,7 +6,7 @@
 <!--![Bitbucket open issues](https://img.shields.io/bitbucket/issues/gabrielbrandaosales/mks-frontend-challenge?style=for-the-badge)
 ![Bitbucket open pull requests](https://img.shields.io/bitbucket/pr-raw/gabrielbrandaosales/mks-frontend-challenge?style=for-the-badge)-->
 
-<a href='http://gabrielbrandao.vercel.app' target="_blank">
+<a href='http://gabrielbrandao.vercel.app](https://mks-frontend-challenge-three-theta.vercel.app/' target="_blank">
 <img src="/public/site-image.png" alt="Exemplo imagem">
 </a>  
 > Este é o meu portfólio, que reúne minhas experiências profissionais, projetos pessoais e minha formação acadêmica.
